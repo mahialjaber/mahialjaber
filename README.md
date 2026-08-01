@@ -58,7 +58,7 @@ My goal: **contribute to a real security team, gain hands-on experience, and gro
 
 ## 🔬 Portfolio Projects
 
-> Real hands-on work from my AWS environment and home lab — not tutorials, not copy-paste.
+> Real hands-on work from my AWS environment and home lab —
 
 ---
 
@@ -71,16 +71,7 @@ A Python-powered threat detection tool that continuously monitors AWS CloudTrail
 
 ---
 
-### 🐍 2. Python Log Parser & Alert Engine
-**Tools:** Python · Regex · Pandas · Apache/Nginx Logs
-
-Parses raw web server access logs and automatically flags dangerous patterns — brute force login attempts, directory traversal scans, and IP spike anomalies. Outputs a clean, structured alert report ready to hand to a SOC team lead.
-
-📁 *[View Repository →]*
-
----
-
-### 📊 3. Splunk SIEM Detection Rules
+### 📊 2. Splunk SIEM Detection Rules
 **Tools:** Splunk · SPL · BOTS Dataset · Incident Analysis
 
 A library of production-ready Splunk SPL queries for real-world SOC threats: failed login storms, Nmap scan fingerprints, and suspicious PowerShell execution chains. Every query is documented with screenshots, threat context, and analyst notes.
