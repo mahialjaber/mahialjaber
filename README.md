@@ -56,30 +56,6 @@ My goal: **contribute to a real security team, gain hands-on experience, and gro
 
 ---
 
-## 🔬 Portfolio Projects
-
-> Real hands-on work from my AWS environment and home lab —
-
----
-
-### ☁️ 1. AWS CloudTrail Threat Detector &nbsp;⭐ *Featured*
-**Tools:** Python · boto3 · AWS CloudTrail · GuardDuty · IAM · S3
-
-A Python-powered threat detection tool that continuously monitors AWS CloudTrail logs and raises automated alerts for high-risk events — root account usage, IAM privilege escalation, S3 bucket public exposure, and suspicious cross-region activity. Built with a real AWS free-tier environment. **Most junior security candidates have zero cloud experience. This project changes that.**
-
-📁 *[View Repository →]*
-
----
-
-### 📊 2. Splunk SIEM Detection Rules
-**Tools:** Splunk · SPL · BOTS Dataset · Incident Analysis
-
-A library of production-ready Splunk SPL queries for real-world SOC threats: failed login storms, Nmap scan fingerprints, and suspicious PowerShell execution chains. Every query is documented with screenshots, threat context, and analyst notes.
-
-📁 *[View Repository →]*
-
----
-
 ## 📊 GitHub Stats
 
 <div align="center">
