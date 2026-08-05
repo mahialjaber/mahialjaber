@@ -68,18 +68,6 @@ My goal: **contribute to a real security team, gain hands-on experience, and gro
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=mahialjaber&theme=github-dark&bg_color=0d1117&color=1D9E75&line=1D9E75&point=ffffff&area=true&hide_border=true" width="95%"/>
 </div>
 
----
-
-## 🎯 Currently Building
-
-| Status | What |
-|--------|------|
-| 🔄 Active | AWS CloudTrail Threat Detector (Python + boto3) |
-| 📖 Studying | CompTIA Security+ |
-| 🧪 Practicing | TryHackMe — SOC Level 1 path |
-| 🏗️ Expanding | Home lab — adding Suricata IDS/IPS |
-
----
 
 ## 📫 Let's Connect
 
