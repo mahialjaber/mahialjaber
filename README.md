@@ -24,7 +24,6 @@ analyst = {
     "focus"      : ["Threat Detection", "Incident Response", "Cloud Security", "SIEM"],
     "available"  : "Remote Worldwide | Open to relocation",
     "contact"    : "mahialjaber.dev@gmail.com"
-    "actively seeking a remote SOC internship!"
 }
 ```
 
