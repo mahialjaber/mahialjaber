@@ -42,24 +42,6 @@ Target: 15 rows within 30 days. Sources: CyberDefenders, Splunk BOTS, LetsDefend
 and your own lab.
 -->
 
----
-
-## ⚙️ Detection Engineering
-
-Vendor-neutral **Sigma** rules — each with a documented threat model, tested false positives, and compiled SPL + KQL output.
-
-**Repository:** [SOC-Detection-Rules](#) · *N rules · M ATT&CK techniques covered*
-
-| Rule | Log Source | ATT&CK | FP Notes |
-|---|---|---|---|
-| <!-- rule title --> | <!-- windows/security, aws/cloudtrail --> | <!-- Txxxx --> | <!-- tuning required --> |
-| | | | |
-| | | | |
-
-Rules are validated and converted via `sigma-cli` in CI on every commit.
-
----
-
 ## ☁️ AWS Threat Detection Lab
 
 Self-built AWS environment where I emulate cloud attacker techniques, ship CloudTrail into Splunk, and build detections against the resulting telemetry.
