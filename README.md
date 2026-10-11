@@ -28,6 +28,8 @@ The loop I enjoy: run the technique in my lab, find it in the logs, write it in 
 
 ## Things I've built
 
+**[wazuh-enterprise-soc-lab](https://github.com/mahialjaber/wazuh-enterprise-soc-lab)** — Multi-node endpoint telemetry pipeline, custom XML decoders, Sysmon and Linux auditd telemetry streams, VirusTotal API enrichment, and automated active-response containment.
+
 **[enterprise-threat-detection-soc-lab](https://github.com/mahialjaber/enterprise-threat-detection-soc-lab)** — My SOC lab, end to end: endpoint and cloud telemetry ingestion, custom Splunk SPL detections, attack emulation mapped to ATT&CK. The whole pipeline, not a rule in isolation.
 
 **[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Made it because practice data with known ground truth is annoyingly hard to find.
@@ -35,10 +37,6 @@ The loop I enjoy: run the technique in my lab, find it in the logs, write it in 
 **[CLI-Threat-Analyzer](https://github.com/mahialjaber/CLI-Threat-Analyzer)** — Python terminal tool that parses logs, digests threat-intel reports, and inspects suspicious files. Built to delete the copy-paste half of triage.
 
 **[mitre-attack-study-guide](https://github.com/mahialjaber/mitre-attack-study-guide)** — Offline single-page ATT&CK v19 reference and study tool. Writing it was how I actually learned the matrix.
-
-**[soc-analyst-writeups](https://github.com/mahialjaber/soc-analyst-writeups)** — Investigations from alert to verdict, including the ones I called wrong on the first pass.
-
-*In progress:* a hybrid purple-team SOAR that closes the loop — emulate, detect, respond automatically, measure what the response missed.
 
 ---
 
@@ -188,7 +186,7 @@ No threshold on that one. If someone turns off the recorder, the first event is 
 ---
 
 <p align="center">
-  <sub>Open to SOC analyst and detection engineering work — remote or relocating. Happy to walk through any case file in <a href="https://github.com/mahialjaber/soc-analyst-writeups">soc-analyst-writeups</a>.</sub>
+  <sub>Open to SOC analyst and detection engineering work — remote or relocating. Happy to walk through any case file in <a href="https://github.com/mahialjaber/wazuh-enterprise-soc-lab">wazuh-enterprise-soc-lab</a>.</sub>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0F6E56,1D9E75,5DCAA5&height=90&section=footer" width="100%" alt=""/>
