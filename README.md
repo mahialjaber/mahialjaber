@@ -12,7 +12,9 @@
 
 <p align="center">
   <a href="mailto:mahialjaber.dev@gmail.com"><img height="28" src="https://img.shields.io/badge/mahialjaber.dev@gmail.com-C5221F?style=flat-square&logo=gmail&logoColor=white" alt="Email mahialjaber.dev@gmail.com"/></a>
-  <a href="https://x.com/mahialjaber"><img height="28" src="https://img.shields.io/badge/%40mahialjaber-0A66C2?style=flat-square&logo=x&logoColor=white" alt="X @mahialjaber"/></a>
+  <a href="https://www.linkedin.com/in/mahialjaber"><img height="28" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://x.com/mahialjaber"><img height="28" src="https://img.shields.io/badge/%40mahialjaber-000000?style=flat-square&logo=x&logoColor=white" alt="X @mahialjaber"/></a>
+  <a href="https://mahialjaber.github.io/My-Portfolio_Website/"><img height="28" src="https://img.shields.io/badge/Live_Portfolio-0ea5e9?style=flat-square&logo=githubpages&logoColor=white" alt="Portfolio"/></a>
   <img height="28" src="https://img.shields.io/badge/Chattogram,%20BD%20%C2%B7%20UTC%2B6-44506B?style=flat-square&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTIgMS41YTcuNiA3LjYgMCAwIDAtNy42IDcuNmMwIDUuNiA3LjYgMTMuNCA3LjYgMTMuNHM3LjYtNy44IDcuNi0xMy40QTcuNiA3LjYgMCAwIDAgMTIgMS41em0wIDQuNGEzLjIgMy4yIDAgMSAxIDAgNi40IDMuMiAzLjIgMCAwIDEgMC02LjR6Ii8%2BPC9zdmc%2B&logoColor=white" alt="Chattogram, Bangladesh - UTC+6"/>
 </p>
 
@@ -28,15 +30,17 @@ The loop I enjoy: run the technique in my lab, find it in the logs, write it in 
 
 ## Things I've built
 
+**[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Curated synthetic dataset across 5 security domains with 32+ ⭐ stars and a hands-on hunting playbook.
+
 **[the-10-task-to-master-wazuh](https://github.com/mahialjaber/the-10-task-to-master-wazuh)** — 10 enterprise detection engineering & threat hunting challenges: AWS CloudTrail, Real-Time FIM differential analysis, custom PCRE2 rules, VirusTotal CTI, Active Defense containment, and OpenSearch Dev Tools REST querying.
 
 **[enterprise-threat-detection-soc-lab](https://github.com/mahialjaber/enterprise-threat-detection-soc-lab)** — My SOC lab, end to end: endpoint and cloud telemetry ingestion, custom Splunk SPL detections, attack emulation mapped to ATT&CK. The whole pipeline, not a rule in isolation.
 
-**[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Made it because practice data with known ground truth is annoyingly hard to find.
+**[mitre-attack-study-guide](https://github.com/mahialjaber/mitre-attack-study-guide)** — Offline single-page ATT&CK v19 reference and study tool. Interactive navigator matrix with techniques, tactics, and mitigation mappings.
 
-**[CLI-Threat-Analyzer](https://github.com/mahialjaber/CLI-Threat-Analyzer)** — Python terminal tool that parses logs, digests threat-intel reports, and inspects suspicious files. Built to delete the copy-paste half of triage.
+**[CLI-Threat-Analyzer](https://github.com/mahialjaber/CLI-Threat-Analyzer)** — Python terminal tool that parses server logs, extracts IOCs, digests threat-intel reports, and inspects suspicious files. Built to delete the copy-paste half of triage.
 
-**[mitre-attack-study-guide](https://github.com/mahialjaber/mitre-attack-study-guide)** — Offline single-page ATT&CK v19 reference and study tool. Writing it was how I actually learned the matrix.
+**[My-Portfolio_Website](https://github.com/mahialjaber/My-Portfolio_Website)** — Evidence-first defensive security portfolio hosted live on GitHub Pages: interactive physics-based pull-cord theme switch, Lemon Squeezy & Binance support gateway, and deep-dive case files.
 
 ---
 
