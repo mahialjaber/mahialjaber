@@ -28,7 +28,7 @@ The loop I enjoy: run the technique in my lab, find it in the logs, write it in 
 
 ## Things I've built
 
-**[wazuh-enterprise-soc-lab](https://github.com/mahialjaber/wazuh-enterprise-soc-lab)** — Multi-node endpoint telemetry pipeline, custom XML decoders, Sysmon and Linux auditd telemetry streams, VirusTotal API enrichment, and automated active-response containment.
+**[the-10-task-to-master-wazuh](https://github.com/mahialjaber/the-10-task-to-master-wazuh)** — 10 enterprise detection engineering & threat hunting challenges: AWS CloudTrail, Real-Time FIM differential analysis, custom PCRE2 rules, VirusTotal CTI, Active Defense containment, and OpenSearch Dev Tools REST querying.
 
 **[enterprise-threat-detection-soc-lab](https://github.com/mahialjaber/enterprise-threat-detection-soc-lab)** — My SOC lab, end to end: endpoint and cloud telemetry ingestion, custom Splunk SPL detections, attack emulation mapped to ATT&CK. The whole pipeline, not a rule in isolation.
 
@@ -186,7 +186,7 @@ No threshold on that one. If someone turns off the recorder, the first event is 
 ---
 
 <p align="center">
-  <sub>Open to SOC analyst and detection engineering work — remote or relocating. Happy to walk through any case file in <a href="https://github.com/mahialjaber/wazuh-enterprise-soc-lab">wazuh-enterprise-soc-lab</a>.</sub>
+  <sub>Open to SOC analyst and detection engineering work — remote or relocating. Happy to walk through any case file in <a href="https://github.com/mahialjaber/the-10-task-to-master-wazuh">the-10-task-to-master-wazuh</a>.</sub>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0F6E56,1D9E75,5DCAA5&height=90&section=footer" width="100%" alt=""/>
