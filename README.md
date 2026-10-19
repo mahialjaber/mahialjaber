@@ -12,9 +12,7 @@
 
 <p align="center">
   <a href="mailto:mahialjaber.dev@gmail.com"><img height="28" src="https://img.shields.io/badge/mahialjaber.dev@gmail.com-C5221F?style=flat-square&logo=gmail&logoColor=white" alt="Email mahialjaber.dev@gmail.com"/></a>
-  <img height="28" src="https://img.shields.io/badge/Discord-mahialjaber-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord mahialjaber"/>
   <a href="https://x.com/mahialjaber"><img height="28" src="https://img.shields.io/badge/%40mahialjaber-000000?style=flat-square&logo=x&logoColor=white" alt="X @mahialjaber"/></a>
-  <a href="https://mahialjaber.github.io/My-Portfolio_Website/"><img height="28" src="https://img.shields.io/badge/Live_Portfolio-0ea5e9?style=flat-square&logo=githubpages&logoColor=white" alt="Portfolio"/></a>
   <img height="28" src="https://img.shields.io/badge/Chattogram,%20BD%20%C2%B7%20UTC%2B6-44506B?style=flat-square&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTIgMS41YTcuNiA3LjYgMCAwIDAtNy42IDcuNmMwIDUuNiA3LjYgMTMuNCA3LjYgMTMuNHM3LjYtNy44IDcuNi0xMy40QTcuNiA3LjYgMCAwIDAgMTIgMS41em0wIDQuNGEzLjIgMy4yIDAgMSAxIDAgNi40IDMuMiAzLjIgMCAwIDEgMC02LjR6Ii8%2BPC9zdmc%2B&logoColor=white" alt="Chattogram, Bangladesh - UTC+6"/>
 </p>
 
