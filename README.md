@@ -34,9 +34,9 @@ The loop I enjoy: run the technique in my lab, find it in the logs, write it in 
 
 **[enterprise-threat-detection-soc-lab](https://github.com/mahialjaber/enterprise-threat-detection-soc-lab)** — My SOC lab, end to end: endpoint and cloud telemetry ingestion, custom Splunk SPL detections, attack emulation mapped to ATT&CK. The whole pipeline, not a rule in isolation.
 
-**[mitre-attack-study-guide](https://github.com/mahialjaber/mitre-attack-study-guide)** — Offline single-page ATT&CK v19 reference and study tool. Interactive navigator matrix with techniques, tactics, and mitigation mappings.
+**[enterprise-ad-soc-lab](https://github.com/mahialjaber/enterprise-ad-soc-lab)** — Enterprise Active Directory infrastructure on Windows Server 2022: forest root, multi-master replication with ADC, AD-integrated DNS/DHCP, GPO WMI filtering, and advanced audit policies ready for SOC threat detection.
 
-**[CLI-Threat-Analyzer](https://github.com/mahialjaber/CLI-Threat-Analyzer)** — Python terminal tool that parses server logs, extracts IOCs, digests threat-intel reports, and inspects suspicious files. Built to delete the copy-paste half of triage.
+**[mitre-attack-study-guide](https://github.com/mahialjaber/mitre-attack-study-guide)** — Offline single-page ATT&CK v19 reference and study tool. Interactive navigator matrix with techniques, tactics, and mitigation mappings.
 
 **[My-Portfolio_Website](https://github.com/mahialjaber/My-Portfolio_Website)** — Evidence-first defensive security portfolio hosted live on GitHub Pages: interactive physics-based pull-cord theme switch, Lemon Squeezy & Binance support gateway, and deep-dive case files.
 
