@@ -38,7 +38,7 @@ The loop I enjoy: run the technique in my lab, find it in the logs, write it in 
 
 **[mitre-attack-study-guide](https://github.com/mahialjaber/mitre-attack-study-guide)** — Offline single-page ATT&CK v19 reference and study tool. Interactive navigator matrix with techniques, tactics, and mitigation mappings.
 
-**[My-Portfolio_Website](https://github.com/mahialjaber/My-Portfolio_Website)** — Evidence-first defensive security portfolio hosted live on GitHub Pages: interactive physics-based pull-cord theme switch, Lemon Squeezy & Binance support gateway, and deep-dive case files.
+**[My-Portfolio_Website](https://github.com/mahialjaber/My-Portfolio_Website)** — Evidence-first defensive security portfolio hosted live on GitHub Pages: interactive physics-based pull-cord theme switch, verified technical case files, and responsive industrial design.
 
 ---
 
@@ -48,36 +48,39 @@ Techniques I've run end to end: executed the behaviour, pulled the telemetry, wr
 
 | Technique | ATT&CK | Telemetry | Detection logic |
 |---|---|---|---|
-| Password spraying against AD | T1110.003 | Windows 4625, 4771 | Failed auth spread wide across accounts from one source, not repeats on one |
-| Credential dumping from LSASS | T1003.001 | Sysmon EID 10 | Non-allowlisted process opening `lsass.exe` with read access |
-| PowerShell download cradle | T1059.001 | Sysmon, EID 4104 | Encoded commands with Office or script-host parents |
-| Service installed for persistence | T1543.003 | Windows 7045 | New service whose binary path sits in a user-writable directory |
-| Scheduled task persistence | T1053.005 | Sysmon EID 1, 4698 | Task created by a non-admin identity outside patch windows |
-| IAM key created, then used from new infrastructure | T1552.001 | CloudTrail | `CreateAccessKey` → first-seen source ASN for that principal |
-| EC2 metadata credential theft | T1552.005 | CloudTrail, VPC Flow | Role session used from an IP that isn't the instance's own |
-| CloudTrail logging disabled | T1562.008 | CloudTrail | `StopLogging` / `DeleteTrail` — first event, no threshold |
+| RDP & SSH Brute Force | T1110.001 | Windows 4625/4624 & Linux `/var/log/secure` | Event correlation tracking failure surges followed by success + dynamic `firewall-drop` |
+| Encoded PowerShell Execution | T1059.001 | Sysmon EID 1, Windows 4688 | Obfuscated Base64 CLI flags (`-e`, `-ec`, `-enc`, `pwsh.exe`) spawned by non-standard parents |
+| AWS IAM User Creation | T1136.003 | CloudTrail (`aws-s3` wodle) | Root/privileged ARN invoking `CreateUser` via AWS Management Console or CLI |
+| System Binary Integrity Tampering | T1565.001 | Linux `syscheck` FIM (`inotify`) | Real-time differential diff alerts on unexpected file modifications in `/usr/bin/` |
+| Malicious Payload Drop + CTI Enrichment | T1203 | FIM hash → `wazuh-integratord` | Automated VirusTotal API lookup matching known malicious hashes (e.g. EICAR 66/68 detection) |
+| Network Service Discovery | T1046 | Suricata `eve.json` NIDS | Port scan signature (`Rule 86601`) paired with scoped child suppression (`Rule 100060`) |
 
-Last row, roughly as it ships:
+Detection rule example from the lab (Sysmon Encoded PowerShell execution):
 
 ```yaml
-title: CloudTrail Logging Disabled
+title: Suspicious Encoded PowerShell Execution
 status: experimental
 logsource:
-  product: aws
-  service: cloudtrail
+  product: windows
+  service: sysmon
 detection:
   selection:
-    eventSource: cloudtrail.amazonaws.com
-    eventName:
-      - StopLogging
-      - DeleteTrail
+    EventID: 1
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+    CommandLine|contains:
+      - ' -e '
+      - ' -ec '
+      - ' -enc '
+      - ' -encodedcommand '
   condition: selection
 level: high
 falsepositives:
-  - Trail rebuilt by IaC — correlate against the deploy pipeline identity before escalating
+  - Legitimate administrative orchestration scripts (verify parent process lineage before escalating)
 ```
 
-No threshold on that one. If someone turns off the recorder, the first event is the incident.
+Directly correlates with the telemetry and hunting queries proven across the Splunk and Wazuh repositories.
 
 ---
 
@@ -101,9 +104,10 @@ No threshold on that one. If someone turns off the recorder, the first event is 
 
 <p>
   <img height="34" src="https://img.shields.io/badge/Splunk_SPL-0F6E56?style=for-the-badge&logo=splunk&logoColor=white" alt="Splunk SPL"/>
+  <img height="34" src="https://img.shields.io/badge/Wazuh_SIEM-0F6E56?style=for-the-badge&logo=wazuh&logoColor=white" alt="Wazuh SIEM"/>
+  <img height="34" src="https://img.shields.io/badge/OpenSearch_DQL-0F6E56?style=for-the-badge&logo=opensearch&logoColor=white" alt="OpenSearch DQL"/>
   <img height="34" src="https://img.shields.io/badge/Sigma-0F6E56?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZD0iTTE4LjYgMy40SDZsNyA4LjYtNyA4LjZoMTIuNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8%2BPC9zdmc%2B&logoColor=white" alt="Sigma"/>
   <img height="34" src="https://img.shields.io/badge/MITRE_ATT%26CK-0F6E56?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZD0iTTIuNiAyLjZoNS40VjhIMi42em02LjcgMGg1LjRWOEg5LjN6bTYuNyAwaDUuNFY4SDE2ek0yLjYgOS4zaDUuNHY1LjRIMi42em02LjcgMGg1LjR2NS40SDkuM3ptNi43IDBoNS40djUuNEgxNnpNMi42IDE2aDUuNHY1LjRIMi42em02LjcgMGg1LjR2NS40SDkuM3ptNi43IDBoNS40djUuNEgxNnoiLz48L3N2Zz4%3D&logoColor=white" alt="MITRE ATT&amp;CK"/>
-  <img height="34" src="https://img.shields.io/badge/Sentinel_KQL-0F6E56?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTIgMS43IDMuNCA0Ljh2Ni41YzAgNS4zIDMuNyA5LjggOC42IDExLjEgNC45LTEuMyA4LjYtNS44IDguNi0xMS4xVjQuOHptMCA2LjFjMyAwIDUuMiAyLjIgNi4xIDQuMS0uOSAxLjktMy4xIDQuMS02LjEgNC4xcy01LjItMi4yLTYuMS00LjFjLjktMS45IDMuMS00LjEgNi4xLTQuMXptMCAxLjlhMi4yIDIuMiAwIDEgMCAwIDQuNCAyLjIgMi4yIDAgMCAwIDAtNC40eiIvPjwvc3ZnPg%3D%3D&logoColor=white" alt="Sentinel KQL"/>
 </p>
 
 **Endpoint &amp; Identity**
@@ -140,8 +144,7 @@ No threshold on that one. If someone turns off the recorder, the first event is 
   <img height="34" src="https://img.shields.io/badge/AWS-A85B10?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZD0iTTE4LjQgMTkuNkg2LjdBNS40IDUuNCAwIDAgMSA2LjEgOC44YTcuMSA3LjEgMCAwIDEgMTMuNCAxLjcgNC42IDQuNiAwIDAgMS0xLjEgOS4xeiIvPjwvc3ZnPg%3D%3D&logoColor=white" alt="AWS"/>
   <img height="34" src="https://img.shields.io/badge/CloudTrail-A85B10?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZD0iTTE3LjQgMTIuOUg2LjZBNC43IDQuNyAwIDAgMSA2LjEgMy42YTYuMiA2LjIgMCAwIDEgMTEuNyAxLjUgNCA0IDAgMCAxLS40IDcuOHoiLz48Y2lyY2xlIGN4PSI1LjYiIGN5PSIxOC42IiByPSIyIi8%2BPGNpcmNsZSBjeD0iMTIiIGN5PSIxOC42IiByPSIyIi8%2BPGNpcmNsZSBjeD0iMTguNCIgY3k9IjE4LjYiIHI9IjIiLz48L3N2Zz4%3D&logoColor=white" alt="CloudTrail"/>
   <img height="34" src="https://img.shields.io/badge/IAM-A85B10?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTUuNiAxLjdhNi43IDYuNyAwIDAgMC02LjQgOC43TDEuNiAxOHY0LjNoNC4zbDEuNC0xLjR2LTIuNGgyLjRsMS42LTEuN3YtMi4ybDIuMy0yLjNhNi43IDYuNyAwIDEgMCAyLTEwLjZ6bTEuNiAzLjFhMiAyIDAgMSAxIDAgNCAyIDIgMCAwIDEgMC00eiIvPjwvc3ZnPg%3D%3D&logoColor=white" alt="IAM"/>
-  <img height="34" src="https://img.shields.io/badge/GuardDuty-A85B10?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTIgMS43IDMuNCA0Ljh2Ni41YzAgNS4zIDMuNyA5LjggOC42IDExLjEgNC45LTEuMyA4LjYtNS44IDguNi0xMS4xVjQuOHptNC41IDYuNiAxLjcgMS43LTYuNyA2LjctMy45LTMuOSAxLjctMS43IDIuMiAyLjJ6Ii8%2BPC9zdmc%2B&logoColor=white" alt="GuardDuty"/>
-  <img height="34" src="https://img.shields.io/badge/VPC_Flow_Logs-A85B10?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPGNpcmNsZSBjeD0iNC40IiBjeT0iNC44IiByPSIzIi8%2BPGNpcmNsZSBjeD0iMTkuNiIgY3k9IjQuOCIgcj0iMyIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTkuMiIgcj0iMyIvPjxwYXRoIGQ9Im02LjQgNi41IDQuMyA5LjktMS44LjhMNC42IDcuM3ptMTEuMiAwIDEuOC44LTQuMyA5LjktMS44LS44eiIvPjxwYXRoIGQ9Ik03LjQgMy44aDkuMnYySDcuNHoiLz48L3N2Zz4%3D&logoColor=white" alt="VPC Flow Logs"/>
+  <img height="34" src="https://img.shields.io/badge/Amazon_S3-A85B10?style=for-the-badge&logo=amazons3&logoColor=white" alt="Amazon S3"/>
 </p>
 
 **Automation &amp; Tooling**
