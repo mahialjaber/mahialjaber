@@ -38,9 +38,9 @@ The loop I enjoy: run the technique in my lab, find it in the logs, write it in 
 
 **[mitre-attack-study-guide](https://github.com/mahialjaber/mitre-attack-study-guide)** — Offline single-page ATT&CK v19 reference and study tool. Interactive navigator matrix with techniques, tactics, and mitigation mappings.
 
-**[soc-investigation-casefiles](https://github.com/mahialjaber/soc-investigation-casefiles)** ? Production-grade SOC alert triage case files: evidence timelines, disproving benign hypotheses, IOC extraction, and host/network containment workflows.
+**[soc-investigation-casefiles](https://github.com/mahialjaber/soc-investigation-casefiles)** — Production-grade SOC alert triage case files: evidence timelines, disproving benign hypotheses, IOC extraction, and host/network containment workflows.
 
-**[phishing-and-network-forensics](https://github.com/mahialjaber/phishing-and-network-forensics)** ? Hands-on phishing email header triage (SPF/DKIM/DMARC, hop chains) and Wireshark PCAP forensic investigations answering the 5 core Tier-1 network analysis questions.
+**[phishing-and-network-forensics](https://github.com/mahialjaber/phishing-and-network-forensics)** — Hands-on phishing email header triage (SPF/DKIM/DMARC, hop chains) and Wireshark PCAP forensic investigations answering the 5 core Tier-1 network analysis questions.
 
 **[My-Portfolio_Website](https://github.com/mahialjaber/My-Portfolio_Website)** — Evidence-first defensive security portfolio hosted live on GitHub Pages: interactive physics-based pull-cord theme switch, verified technical case files, and responsive industrial design.
 
