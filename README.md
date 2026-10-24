@@ -28,7 +28,7 @@ The loop I enjoy: run the technique in my lab, find it in the logs, write it in 
 
 ## Things I've built
 
-**[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Curated synthetic dataset across 5 security domains with 32+ ⭐ stars and a hands-on hunting playbook.
+**[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Curated synthetic dataset across 5 security domains with 35+ ⭐ stars and a hands-on hunting playbook.
 
 **[the-10-task-to-master-wazuh](https://github.com/mahialjaber/the-10-task-to-master-wazuh)** — 10 enterprise detection engineering & threat hunting challenges: AWS CloudTrail, Real-Time FIM differential analysis, custom PCRE2 rules, VirusTotal CTI, Active Defense containment, and OpenSearch Dev Tools REST querying.
 
