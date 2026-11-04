@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0F6E56,1D9E75,5DCAA5&height=190&section=header&text=Mahi%20Al%20Jaber&fontSize=52&fontColor=ffffff&fontAlignY=36&desc=SOC%20Analyst%20%E2%80%94%20Triage%20%C2%B7%20Investigation%20%C2%B7%20Detection%20Engineering&descAlignY=56&descSize=17&animation=fadeIn" width="100%" alt="Mahi Al Jaber — SOC Analyst"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0F6E56,1D9E75,5DCAA5&height=190&section=header&text=Mahi%20Al%20Jaber&fontSize=52&fontColor=ffffff&fontAlignY=36&desc=Security%20Analyst%20%E2%80%94%20SOC%20%C2%B7%20Investigation%20%C2%B7%20Detection%20Engineering&descAlignY=56&descSize=17&animation=fadeIn" width="100%" alt="Mahi Al Jaber — Security Analyst (SOC &amp; Detection Engineering)"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&pause=1100&color=1D9E75&center=true&vCenter=true&width=760&lines=Alert+triage+%C2%B7+investigation+%C2%B7+escalation;Sysmon+%C2%B7+Windows+Event+Logs+%C2%B7+Splunk+SPL;Sigma+detections+mapped+to+MITRE+ATT%26CK;Cloud+is+just+another+log+source" alt="Alert triage, investigation, escalation"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&pause=1100&color=1D9E75&center=true&vCenter=true&width=760&lines=Alert+triage+%C2%B7+threat+investigation+%C2%B7+containment;Sysmon+%C2%B7+Active+Directory+%C2%B7+PCAP+%26+Phishing+DFIR;Sigma+detections+%C2%B7+Splunk+SPL+%C2%B7+Wazuh+SIEM;Endpoint,+identity,+network+%26+AWS+CloudTrail" alt="Alert triage, threat investigation, containment"/>
 
 </div>
 
@@ -18,11 +18,9 @@
 
 ---
 
-Blue team. Most of my hours go where a SOC actually lives: Sysmon and Windows event logs, AD authentication, PowerShell activity, Splunk searches that start as a hunch and end as a rule.
+Blue team security analyst focused on alert triage, incident investigation, and detection engineering. I investigate across Windows/Sysmon event logs, Active Directory, network traffic, phishing artifacts, and AWS CloudTrail — treating on-prem and cloud as one timeline. In the lab, I run the attack, trace the telemetry, write the Sigma or SPL rule, and tune it until it survives normal traffic.
 
-Cloud isn't a separate track for me — it's another log source on the same console. A role session hitting CloudTrail from an address that has no business holding those credentials is the same investigation I'd run on a workstation, with different field names. Being able to follow the attacker across both is the part that stopped me being a beginner.
-
-The loop I enjoy: run the technique in my lab, find it in the logs, write it in Sigma or SPL, then break my own rule until it survives contact with normal traffic. Half of detection engineering turns out to be deleting rules that were never going to fire cleanly. Everything below is the working record of that.
+> **Verified Credential:** [TryHackMe SOC Level 1](https://tryhackme.com/certificate/THM-UV7LHQKCLC) (`THM-UV7LHQKCLC`) — 14 modules · 65 hands-on labs across cyber defense frameworks, phishing & PCAP forensics, endpoint DFIR, and SIEM threat detection.
 
 ---
 
@@ -30,15 +28,15 @@ The loop I enjoy: run the technique in my lab, find it in the logs, write it in 
 
 **[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Curated synthetic dataset across 5 security domains with 35+ ⭐ stars and a hands-on hunting playbook.
 
-**[the-10-task-to-master-wazuh](https://github.com/mahialjaber/the-10-task-to-master-wazuh)** — 10 enterprise detection engineering & threat hunting challenges: AWS CloudTrail, Real-Time FIM differential analysis, custom PCRE2 rules, VirusTotal CTI, Active Defense containment, and OpenSearch Dev Tools REST querying.
+**[the-10-task-to-master-wazuh](https://github.com/mahialjaber/the-10-task-to-master-wazuh)** — 10 hands-on Wazuh detection engineering & threat hunting challenges: AWS CloudTrail, real-time FIM differential analysis, custom PCRE2 rules, VirusTotal CTI, active response containment, and OpenSearch Dev Tools REST querying.
 
-**[enterprise-threat-detection-soc-lab](https://github.com/mahialjaber/enterprise-threat-detection-soc-lab)** — My SOC lab, end to end: endpoint and cloud telemetry ingestion, custom Splunk SPL detections, attack emulation mapped to ATT&CK. The whole pipeline, not a rule in isolation.
+**[threat-detection-soc-lab](https://github.com/mahialjaber/threat-detection-soc-lab)** — End-to-end AWS & Windows detection lab: Splunk Universal Forwarder ingestion, custom SPL correlation searches, and Hydra / Atomic Red Team attack emulation mapped to MITRE ATT&CK. The whole pipeline, not a rule in isolation.
 
-**[active-directory-soc-lab](https://github.com/mahialjaber/active-directory-soc-lab)** — Enterprise Active Directory infrastructure on Windows Server 2022: forest root, multi-master replication with ADC, AD-integrated DNS/DHCP, GPO WMI filtering, and advanced audit policies ready for SOC threat detection.
+**[active-directory-soc-lab](https://github.com/mahialjaber/active-directory-soc-lab)** — Multi-controller Active Directory lab on Windows Server 2022: forest root, multi-master replication with ADC, AD-integrated DNS/DHCP, GPO WMI filtering, and granular audit policies tuned for threat detection.
 
-**[soc-investigation-casefiles](https://github.com/mahialjaber/soc-investigation-casefiles)** — Hands-on Tier-1 SOC alert triage and investigation case files: evidence timelines, disproving benign hypotheses, IOC extraction, and containment playbooks.
+**[soc-investigation-casefiles](https://github.com/mahialjaber/soc-investigation-casefiles)** — Structured alert triage and incident investigation case files: evidence timelines, disproving benign hypotheses, IOC extraction, and containment playbooks.
 
-**[My-Portfolio_Website](https://github.com/mahialjaber/My-Portfolio_Website)** — Evidence-first defensive security portfolio hosted live on GitHub Pages: interactive physics-based pull-cord theme switch, verified technical case files, and responsive industrial design.
+**[My-Portfolio_Website](https://github.com/mahialjaber/My-Portfolio_Website)** — Evidence-first defensive security portfolio hosted live on [GitHub Pages](https://mahialjaber.github.io/My-Portfolio_Website/): interactive physics-based pull-cord theme switch, verified technical case files, and responsive industrial design.
 
 ---
 
@@ -182,16 +180,8 @@ Directly correlates with the telemetry and hunting queries proven across the Spl
 
 ---
 
-## Now
-
-- Growing the lab's detection library and writing each case up as I close it
-- Splunk Core Certified Power User, in progress
-- Rebuilding public detection rules in my own environment to find where mine are weaker
-
----
-
 <p align="center">
-  <sub>Open to SOC analyst and detection engineering work — remote or relocating. Happy to walk through any case file in <a href="https://github.com/mahialjaber/the-10-task-to-master-wazuh">the-10-task-to-master-wazuh</a>.</sub>
+  <sub>Open to Security Analyst, SOC, and Detection Engineering roles — remote or relocating. Happy to walk through any investigation or detection in <a href="https://github.com/mahialjaber/the-10-task-to-master-wazuh">the-10-task-to-master-wazuh</a> or <a href="https://github.com/mahialjaber/soc-investigation-casefiles">soc-investigation-casefiles</a>.</sub>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0F6E56,1D9E75,5DCAA5&height=90&section=footer" width="100%" alt=""/>
