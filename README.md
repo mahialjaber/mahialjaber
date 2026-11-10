@@ -28,15 +28,13 @@ Blue team security analyst focused on alert triage, incident investigation, and 
 
 **[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Curated synthetic dataset across 5 security domains with 35+ ⭐ stars and a hands-on hunting playbook.
 
-**[the-10-task-to-master-wazuh](https://github.com/mahialjaber/the-10-task-to-master-wazuh)** — 10 hands-on Wazuh detection engineering & threat hunting challenges: AWS CloudTrail, real-time FIM differential analysis, custom PCRE2 rules, VirusTotal CTI, active response containment, and OpenSearch Dev Tools REST querying.
+**[soc-investigation-casefiles](https://github.com/mahialjaber/soc-investigation-casefiles)** — Structured alert triage and incident investigation case files: evidence timelines, disproving benign hypotheses, IOC extraction, and containment playbooks.
 
 **[threat-detection-soc-lab](https://github.com/mahialjaber/threat-detection-soc-lab)** — End-to-end AWS & Windows detection lab: Splunk Universal Forwarder ingestion, custom SPL correlation searches, and Hydra / Atomic Red Team attack emulation mapped to MITRE ATT&CK. The whole pipeline, not a rule in isolation.
 
-**[active-directory-soc-lab](https://github.com/mahialjaber/active-directory-soc-lab)** — Multi-controller Active Directory lab on Windows Server 2022: forest root, multi-master replication with ADC, AD-integrated DNS/DHCP, GPO WMI filtering, and granular audit policies tuned for threat detection.
+**[wazuh-setup-and-lab-tasks](https://github.com/mahialjaber/wazuh-setup-and-lab-tasks)** — 10 hands-on Wazuh detection engineering & threat hunting challenges: AWS CloudTrail, real-time FIM differential analysis, custom PCRE2 rules, VirusTotal CTI, active response containment, and OpenSearch Dev Tools REST querying.
 
-**[soc-investigation-casefiles](https://github.com/mahialjaber/soc-investigation-casefiles)** — Structured alert triage and incident investigation case files: evidence timelines, disproving benign hypotheses, IOC extraction, and containment playbooks.
-
-**[My-Portfolio_Website](https://github.com/mahialjaber/My-Portfolio_Website)** — Evidence-first defensive security portfolio hosted live on [GitHub Pages](https://mahialjaber.github.io/My-Portfolio_Website/): interactive physics-based pull-cord theme switch, verified technical case files, and responsive industrial design.
+**[MiCode](https://github.com/mahialjaber/MiCode)** — Tiny offline PowerShell & Base64 decoder for security analysts, live on [GitHub Pages](https://mahialjaber.github.io/MiCode/): auto-detects `-enc` flags, UTF-16LE/UTF-8 encodings, and Gzip/Deflate payloads 100% locally in the browser.
 
 ---
 
@@ -181,7 +179,7 @@ Directly correlates with the telemetry and hunting queries proven across the Spl
 ---
 
 <p align="center">
-  <sub>Open to Security Analyst, SOC, and Detection Engineering roles — remote or relocating. Happy to walk through any investigation or detection in <a href="https://github.com/mahialjaber/the-10-task-to-master-wazuh">the-10-task-to-master-wazuh</a> or <a href="https://github.com/mahialjaber/soc-investigation-casefiles">soc-investigation-casefiles</a>.</sub>
+  <sub>Open to Security Analyst, SOC, and Detection Engineering roles — remote or relocating. Happy to walk through any investigation or detection in <a href="https://github.com/mahialjaber/soc-investigation-casefiles">soc-investigation-casefiles</a> or <a href="https://github.com/mahialjaber/threat-detection-soc-lab">threat-detection-soc-lab</a>.</sub>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0F6E56,1D9E75,5DCAA5&height=90&section=footer" width="100%" alt=""/>
