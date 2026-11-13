@@ -28,7 +28,7 @@ Blue team security analyst focused on alert triage, incident investigation, and 
 
 **[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Curated synthetic dataset across 5 security domains with 35+ ⭐ stars and a hands-on hunting playbook.
 
-**[soc-investigation-casefiles](https://github.com/mahialjaber/soc-investigation-casefiles)** — Structured alert triage and incident investigation case files: evidence timelines, disproving benign hypotheses, IOC extraction, and containment playbooks.
+**[investigation-casefiles](https://github.com/mahialjaber/investigation-casefiles)** — Structured alert triage and incident investigation case files: evidence timelines, disproving benign hypotheses, IOC extraction, and containment playbooks.
 
 **[threat-detection-soc-lab](https://github.com/mahialjaber/threat-detection-soc-lab)** — End-to-end AWS & Windows detection lab: Splunk Universal Forwarder ingestion, custom SPL correlation searches, and Hydra / Atomic Red Team attack emulation mapped to MITRE ATT&CK. The whole pipeline, not a rule in isolation.
 
@@ -179,7 +179,7 @@ Directly correlates with the telemetry and hunting queries proven across the Spl
 ---
 
 <p align="center">
-  <sub>Open to Security Analyst, SOC, and Detection Engineering roles — remote or relocating. Happy to walk through any investigation or detection in <a href="https://github.com/mahialjaber/soc-investigation-casefiles">soc-investigation-casefiles</a> or <a href="https://github.com/mahialjaber/threat-detection-soc-lab">threat-detection-soc-lab</a>.</sub>
+  <sub>Open to Security Analyst, SOC, and Detection Engineering roles — remote or relocating. Happy to walk through any investigation or detection in <a href="https://github.com/mahialjaber/investigation-casefiles">investigation-casefiles</a> or <a href="https://github.com/mahialjaber/threat-detection-soc-lab">threat-detection-soc-lab</a>.</sub>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0F6E56,1D9E75,5DCAA5&height=90&section=footer" width="100%" alt=""/>
