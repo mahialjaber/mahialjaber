@@ -26,7 +26,7 @@ Blue team security analyst focused on alert triage, incident investigation, and 
 
 ## Things I've built
 
-**[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Curated synthetic dataset across 5 security domains with 35+ ⭐ stars and a hands-on hunting playbook.
+**[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Curated synthetic dataset across 5 security domains with 50+ ⭐ stars and a hands-on hunting playbook.
 
 **[investigation-casefiles](https://github.com/mahialjaber/investigation-casefiles)** — Structured alert triage and incident investigation case files: evidence timelines, disproving benign hypotheses, IOC extraction, and containment playbooks.
 
