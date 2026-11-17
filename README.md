@@ -34,7 +34,7 @@ Blue team security analyst focused on alert triage, incident investigation, and 
 
 **[wazuh-setup-and-lab-tasks](https://github.com/mahialjaber/wazuh-setup-and-lab-tasks)** — 10 hands-on Wazuh detection engineering & threat hunting challenges: AWS CloudTrail, real-time FIM differential analysis, custom PCRE2 rules, VirusTotal CTI, active response containment, and OpenSearch Dev Tools REST querying.
 
-**[Decodora](https://github.com/mahialjaber/Decodora)** — Fast offline PowerShell, Base64, Base85, Obfuscated URL & Hex decoder for security analysts, live on [GitHub Pages](https://mahialjaber.github.io/Decodora/): auto-detects `-enc` flags, Ascii85/RFC1924, defanged/SafeLinks URLs, and Gzip/Deflate payloads 100% locally in the browser.
+**[Decodora](https://github.com/mahialjaber/Decodora)** — Zero-recipe, multi-layer payload unwrapper & IOC extractor for SOC triage, live on [GitHub Pages](https://mahialjaber.github.io/Decodora/): auto-peels up to 6 encoding layers (PowerShell `-enc`, Gzip/Deflate, Base85, Hex, Reversed scripts, SafeLinks/Proofpoint) and exports defanged IOCs 100% locally under strict `connect-src 'none'` CSP.
 
 ---
 
