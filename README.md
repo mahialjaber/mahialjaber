@@ -26,7 +26,7 @@ Blue team security analyst focused on alert triage, incident investigation, and 
 
 ## Things I've built
 
-**[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Curated synthetic dataset across 5 security domains with 70+ ⭐ stars and a hands-on hunting playbook.
+**[SOC-Log-Analysis-Datasets](https://github.com/mahialjaber/SOC-Log-Analysis-Datasets)** — Windows, web, firewall, and cloud logs with attack vectors embedded, MIT licensed. Curated synthetic dataset across 5 security domains with a hands-on hunting playbook. ![GitHub stars](https://img.shields.io/github/stars/mahialjaber/SOC-Log-Analysis-Datasets?style=flat-square)
 
 **[investigation-casefiles](https://github.com/mahialjaber/investigation-casefiles)** — Structured alert triage and incident investigation case files: evidence timelines, disproving benign hypotheses, IOC extraction, and containment playbooks.
 
@@ -58,25 +58,23 @@ title: Suspicious Encoded PowerShell Execution
 status: experimental
 logsource:
   product: windows
-  service: sysmon
+  category: process_creation   # works with Sysmon EID 1 and Security 4688
 detection:
-  selection:
-    EventID: 1
+  selection_img:
     Image|endswith:
       - '\powershell.exe'
       - '\pwsh.exe'
-    CommandLine|contains:
-      - ' -e '
-      - ' -ec '
-      - ' -enc '
-      - ' -encodedcommand '
-  condition: selection
+  selection_flag:
+    # -e, -ec, -en, -enc ... -encodedcommand, with '-' or '/' prefix, any case,
+    # followed by a Base64-looking argument. Does not match -ExecutionPolicy.
+    CommandLine|re: '(?i)\s[-/]e(c|n[a-z]*)?\s+["'']?[A-Za-z0-9+/=]{16,}'
+  condition: selection_img and selection_flag
 level: high
 falsepositives:
   - Legitimate administrative orchestration scripts (verify parent process lineage before escalating)
 ```
 
-Directly correlates with the telemetry and hunting queries proven across the Splunk and Wazuh repositories.
+Same detection logic as the encoded-PowerShell reference query in `threat-detection-soc-lab` (Sysmon was not part of that lab run, so validating it against real Sysmon telemetry is on my to-do list).
 
 ---
 
@@ -150,7 +148,6 @@ Directly correlates with the telemetry and hunting queries proven across the Spl
   <img height="34" src="https://img.shields.io/badge/Bash-44506B?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash"/>
   <img height="34" src="https://img.shields.io/badge/Linux-44506B?style=for-the-badge&logo=linux&logoColor=white" alt="Linux"/>
   <img height="34" src="https://img.shields.io/badge/Kali-44506B?style=for-the-badge&logo=kalilinux&logoColor=white" alt="Kali"/>
-  <img height="34" src="https://img.shields.io/badge/Docker-44506B?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
   <img height="34" src="https://img.shields.io/badge/Git-44506B?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
 </p>
 
